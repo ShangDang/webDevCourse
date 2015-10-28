@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+{%block content%}
+	<form action = "/blog/newpost">
+		<input type = "submit" value = "post a new blog" >
+	<form>
+	<br><br>
+	{%for p in posts%}
+	{{p.render() | safe}}
+	<br><br>
+	{%endfor%}
+{%endblock%}
